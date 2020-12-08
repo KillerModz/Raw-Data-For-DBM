@@ -1,0 +1,159 @@
+{
+  "name": "gencode",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "YGluw",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "AdminLevel",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "varAdminLvL",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "Username",
+      "name": "Store Member Info"
+    },
+    {
+      "input": "a 0",
+      "wordLength": "9",
+      "storage": "1",
+      "varName": "A",
+      "name": "Randomize Letters"
+    },
+    {
+      "input": "a 0",
+      "wordLength": "13",
+      "storage": "1",
+      "varName": "b",
+      "name": "Randomize Letters"
+    },
+    {
+      "input": "a 0",
+      "wordLength": "5",
+      "storage": "1",
+      "varName": "C",
+      "name": "Randomize Letters"
+    },
+    {
+      "storage": "1",
+      "varName": "varAdminLvL",
+      "comparison": "1",
+      "value": "255",
+      "iftrue": "2",
+      "iftrueVal": "8",
+      "iffalse": "2",
+      "iffalseVal": "14",
+      "name": "Check Variable"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "input": "",
+      "format": "",
+      "filename": "${tempVars(\"A\")}-${tempVars(\"b\")}-${tempVars(\"C\")}",
+      "filepath": "./codes/",
+      "filetask": "0",
+      "name": "File Control"
+    },
+    {
+      "title": "• Beta Code successfuly generated!",
+      "author": "",
+      "color": "",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "Embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "message": "${tempVars(\"Username\")}, a Code got successfuly generated for you.\n",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "fieldName": "Code",
+      "message": "||${tempVars(\"A\")}-${tempVars(\"b\")}-${tempVars(\"C\")}||",
+      "inline": "1",
+      "name": "Add Embed Field"
+    },
+    {
+      "storage": "1",
+      "varName": "Embed",
+      "channel": "1",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "title": "• Insufficient Permissions!",
+      "author": "",
+      "color": "",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "ErrorEmb",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "ErrorEmb",
+      "message": "You don't have enough Permissions to do that!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "ErrorEmb",
+      "channel": "1",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "messageContent": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
