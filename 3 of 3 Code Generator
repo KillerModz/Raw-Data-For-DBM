@@ -1,0 +1,33 @@
+{
+  "name": "powerlevel",
+  "permissions": "NONE",
+  "restriction": "2",
+  "_id": "kosZy",
+  "actions": [
+    {
+      "info": "0",
+      "infoIndex": "2",
+      "storage": "1",
+      "varName": "Params",
+      "name": "Store Command Params"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "AdminLevel",
+      "changeType": "0",
+      "value": "tempVars(\"Params\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "> Powerlevel of ${mentionedUser} is now ${tempVars(\"Params\")}.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
